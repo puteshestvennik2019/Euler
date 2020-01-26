@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         int n = 10;
         int nthPerm = 10;
-        int remainingPerms = nthPerm; // 1st being the original order of array
+        int remainingPerms = nthPerm;
         ArrayList<Integer> digits = populateDigits(n);
         long[] factorials = factorials(n);
         String res = "";
