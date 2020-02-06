@@ -2,11 +2,11 @@ public class Main {
 
     public static void main(String[] args) {
 	    int[] factorials = populateFactorials(9);
-	    int res = findSumDigitPowers(factorials);
+	    int res = findSumDigitFactorials(factorials);
         System.out.println(res);
     }
 
-    public static int findSumDigitPowers(int[] factorials) {
+    public static int findSumDigitFactorials(int[] factorials) {
         int upperBoundDigits = upperLimit(factorials[9]);
         int highestNumber = upperBoundDigits * factorials[9];
         int minSum = 10;
