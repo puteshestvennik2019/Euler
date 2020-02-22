@@ -16,6 +16,27 @@ public class Main {
             res += prod;
             res %= tenDig;
         }
+
+//        res = 405071317;
+
+//        for (int i = 11; i <= N; i++) {
+//            res += BME(i,i,tenDig);
+//           res %= tenDig;
+//        }
+
         System.out.println(res);
+    }
+
+    // Binary Modular Exponentiation
+    public static int BME(int base, int exp, int mod) {
+        long c = 1;
+        long b = base;
+        while (exp > 0) {
+            if (exp % 2 == 1)
+                c = (c * b) % mod;
+            b = (b * b) % mod;
+            exp >>= 1;
+        }
+        return (int) c;
     }
 }
